@@ -6,7 +6,7 @@ networks:
 
 services:
 
-    §§INSTANCE-gui_adminer::
+    §§INSTANCE-gui_adminer:
         image: adminer # dockerimage + version
         container_name:  §§INSTANCE-gui_adminer
         restart: always
