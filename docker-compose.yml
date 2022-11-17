@@ -1,0 +1,35 @@
+version: '3.1' #dockercomposer version
+
+networks:
+    bibbox-default-network:
+        external: true
+
+services :
+
+  gui_adminer:
+    image: adminer
+    container_name: gui_adminer
+    restart: always
+    depends_on: 
+      - db_postgre
+    ports:
+      - 8080:8080
+    networks:
+      - bibbox-default-network
+
+  db_postgre:
+    image: postgres:11.5
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - ./data/postgres-data:/var/lib/postgresql/
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: mydb
+    networks:
+      - bibbox-default-network
+
+
+

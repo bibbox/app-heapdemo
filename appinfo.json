@@ -1,0 +1,10 @@
+{
+   "name": "HEAP Demo app 0.0",
+   "short_name": "HEAP",
+   "version": "V.0.0",
+   "description": "HEAP Demo app: GUI (Adminer) + Database (Postgres)",
+   "short_description": "Demo",
+   "catalogue_url": "",
+   "application_url": "www.google.com",
+   "tags": ["demo app"]
+}

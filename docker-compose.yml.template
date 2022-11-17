@@ -1,0 +1,31 @@
+version: "3.1"
+
+networks:
+    bibbox-default-network:
+       external: true
+
+services:
+
+    §§INSTANCE-gui_adminer::
+        image: adminer # dockerimage + version
+        container_name:  §§INSTANCE-gui_adminer
+        restart: always
+        ports:
+          - "8080:8080"
+        depends_on:
+          - §§INSTANCE-db_postgre
+        networks:
+          - bibbox-default-network
+
+
+    §§INSTANCE-db_postgre:
+        image: postgres:11.5
+        container_name: §§INSTANCE-db_postgre
+        restart: always
+        user: root
+        environment:
+          - POSTGRES_USER
+          - POSTGRES_PASSWORD=§§POSTGRE_PASSWORD
+          - POSTGRES_DB
+        networks:
+          - bibbox-default-network 
