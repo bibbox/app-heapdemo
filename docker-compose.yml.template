@@ -16,6 +16,11 @@ services:
           - §§INSTANCE-db_postgre
         networks:
           - bibbox-default-network
+        proxy: # Informs the BIBBOX of what is there.
+          TYPE: PRIMARY
+          URLPREFIX: §§INSTANCE
+          TEMPLATE: default
+          DISPLAYNAME: 'HEAP DEMO'
 
 
     §§INSTANCE-db_postgre:
