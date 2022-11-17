@@ -10,7 +10,7 @@ services:
         image: adminer # dockerimage + version
         container_name:  §§INSTANCE-gui_adminer
         restart: always
-        ports:s
+        ports:
           - "8080:8080"
         depends_on:
           - §§INSTANCE-db_postgre
