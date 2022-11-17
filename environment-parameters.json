@@ -1,11 +1,34 @@
 [
   {
-      "id": "POSTGRE_PASSWORD",
-      "display_name":"Password for postgre database",
+      "id": "DB_USER",
+      "display_name":"Username",
       "type":"text",
       "default_value":"",
-      "description":"User's password",
+      "description":"User's id",
       "min_length": "1",
       "max_length": "128"
-   }
+   },
+
+  {
+    "id": "DB_PASSWORD",
+    "display_name":"Password for postgre database",
+    "type":"text",
+    "default_value":"",
+    "description":"User's password",
+    "min_length": "1",
+    "max_length": "128"
+  },
+
+  {
+    "id": "DB_NAME",
+    "display_name":"Name of the databank",
+    "type":"text",
+    "default_value":"",
+    "description":"Name of the databank",
+    "min_length": "1",
+    "max_length": "128"
+  }
 ]
+
+
+
