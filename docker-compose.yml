@@ -16,6 +16,8 @@ services :
       - 8080:8080
     networks:
       - bibbox-default-network
+    Links:
+      - db_postgre:db
 
   db_postgre:
     image: postgres:11.5
