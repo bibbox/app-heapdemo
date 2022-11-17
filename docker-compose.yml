@@ -16,7 +16,7 @@ services :
       - 8080:8080
     networks:
       - bibbox-default-network
-    Links:
+    links:
       - db_postgre:db
 
   db_postgre:
